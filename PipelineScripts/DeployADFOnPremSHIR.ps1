@@ -171,6 +171,7 @@ $MSIInstallArguments = @(
      "/norestart" 
  )
  #Write-Debug $MSIInstallArguments
+ UnInstall-Gateway
  Start-Process "msiexec.exe" -ArgumentList $MSIInstallArguments  -Wait -NoNewWindow
 
 #CheckIsAdmin
