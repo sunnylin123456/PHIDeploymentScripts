@@ -86,7 +86,7 @@ function Get-CmdFilePath()
         throw "Get-InstalledFilePath: Cannot find installed File Path"
     }
 
-    return $filePath
+    return (Split-Path -Parent $filePath) + "\dmgcmd.exe"
 }
 
 function Validate-Input([string]$path, [string]$key)
